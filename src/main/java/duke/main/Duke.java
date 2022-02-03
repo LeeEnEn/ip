@@ -1,11 +1,11 @@
 package duke.main;
 
+import java.util.Scanner;
+
 import duke.parser.Parser;
 import duke.storage.Storage;
 import duke.tasklist.TaskList;
 import duke.ui.Ui;
-
-import java.util.Scanner;
 
 /**
  * Behaves as a task manager to keep record of the different tasks.

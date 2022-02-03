@@ -1,15 +1,15 @@
 package duke.parser;
 
-import duke.tasklist.TaskList;
-import duke.ui.Ui;
+import java.time.LocalDate;
+import java.time.format.DateTimeParseException;
+
 import duke.exception.DukeException;
 import duke.task.Deadline;
 import duke.task.Event;
 import duke.task.Task;
 import duke.task.Todo;
-
-import java.time.LocalDate;
-import java.time.format.DateTimeParseException;
+import duke.tasklist.TaskList;
+import duke.ui.Ui;
 
 /**
  * Handles user input and commands.
@@ -57,8 +57,8 @@ public class Parser {
                 }
             }
         } catch (IndexOutOfBoundsException e) {
-            ui.echo("Duke.Main.Duke has noticed that the number you provided does not \nmatch the number of task you have." +
-                    "\nPlease enter a valid task number!");
+            ui.echo("Duke.Main.Duke has noticed that the number you provided does not "
+                    + "\nmatch the number of task you have.\nPlease enter a valid task number!");
         } catch (NumberFormatException e) {
             ui.echo("OOPS!!! Please enter a valid task number!");
         }
@@ -94,6 +94,8 @@ public class Parser {
                 break;
             case TODO:
                 task = new Todo(userInput[1].strip());
+                break;
+            default:
                 break;
             }
 

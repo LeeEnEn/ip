@@ -1,8 +1,8 @@
 package duke.task;
 
-import duke.ui.Ui;
-
 import java.time.LocalDate;
+
+import duke.ui.Ui;
 
 /**
  * Handles the creation of tasks.

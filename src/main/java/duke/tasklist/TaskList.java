@@ -1,12 +1,12 @@
 package duke.tasklist;
 
-import duke.exception.DukeException;
-import duke.ui.Ui;
-import duke.task.Task;
-
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+
+import duke.exception.DukeException;
+import duke.task.Task;
+import duke.ui.Ui;
 
 /**
  * Handles the execution of tasks.
@@ -41,7 +41,8 @@ public class TaskList {
     public void delete(int pos) {
         String description = list.get(pos).toString();
         list.remove(pos);
-        new Ui().echo("Noted. I've removed this task:\n" + description + "\nNow you have " + list.size() + " tasks in the list.");
+        new Ui().echo("Noted. I've removed this task:\n" + description + "\nNow you have "
+                + list.size() + " tasks in the list.");
     }
 
     /**

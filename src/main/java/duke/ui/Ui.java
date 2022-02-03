@@ -25,7 +25,7 @@ public class Ui {
     /**
      * Prints a goodbye message to the user.
      */
-    public void goodbye(){
+    public void goodbye() {
         echo("Bye. Hope to see you again soon!");
     }
 
